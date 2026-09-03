@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@600;700&display=swap');
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 50% 0%, #164b73, #07182c 55%, #030914); color: #f5fbff; font-family: 'Rajdhani', sans-serif; }
+.game-shell { width: min(100%, 1120px); padding: 18px; }
+.marquee, footer { display: flex; justify-content: space-between; align-items: center; font-family: 'Press Start 2P', monospace; font-size: clamp(10px, 1.5vw, 15px); letter-spacing: 1px; color: #bdedff; text-shadow: 0 0 12px #25b6ff; }
+.marquee { padding: 0 5px 13px; }.marquee span { color: #fff; }.marquee em { color: #64dffb; font-style: normal; }
+.game-frame { position: relative; border: 4px solid #a8ebff; box-shadow: 0 0 0 4px #145783, 0 0 32px #2bc2ff99; background: #08192c; aspect-ratio: 16 / 9; overflow: hidden; }
+canvas { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.hud { position: absolute; inset: 16px 18px auto; pointer-events: none; display: flex; justify-content: space-between; gap: 8px; }
+.hud-card { min-width: 108px; padding: 6px 9px; border: 2px solid #7cdfff; background: #061326c9; color: #fff; font-family: 'Press Start 2P', monospace; text-shadow: 2px 2px #103659; }.hud-card small { display:block; font-size: 8px; color:#7eeaff; margin-bottom:7px; }.hud-card strong { font-size: 11px; }.timer { text-align: center; }
+.banner { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 18px; text-align: center; background: linear-gradient(#061a36aa, #061a3699); padding: 20px; }.banner.hidden { display:none; }.banner h1 { margin:0; font: clamp(24px, 5vw, 48px) 'Press Start 2P', monospace; color:#fff; text-shadow: 5px 5px #0e77a9, 0 0 22px #79edff; line-height: 1.35; }.banner p { margin:0; color:#c9f6ff; font-weight:700; letter-spacing:1px; }.banner button { cursor:pointer; padding: 15px 20px; border: 3px solid white; background:#ff405d; color:#fff; font: 13px 'Press Start 2P', monospace; box-shadow: 4px 4px #a20f35; transition: transform .12s; }.banner button:hover { transform: translate(-2px,-2px); }.banner button:active { transform: translate(3px,3px); box-shadow: 1px 1px #a20f35; }
+footer { padding: 14px 5px 0; font-size: 8px; color:#73b9d9; }
+@media (max-width:600px) { .game-shell { padding:10px; }.hud { inset: 9px; }.hud-card { min-width: 75px; padding:5px; }.hud-card small { font-size:6px; margin-bottom:5px; }.hud-card strong { font-size:8px; } footer { font-size:6px; }.banner p { font-size:12px; } }
